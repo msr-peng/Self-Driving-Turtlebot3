@@ -56,7 +56,7 @@ I decided to implement a PID controller to make the robot follow the lane lines.
 
 **1. Camera Calibration**
 I collected 20 images of chessboard from varying angle and distance served as camera calibration input, feed them into `cv2.findChessboardCorners` to get object points and image points, then feed the result into `cv2.calibrateCamera` to get the Camera Matrix. Here is the result after distortion correction.
-![Camera Calibration & Distortion Correction](pictures/Advanced Lane Line Finding/Camera Calibration.png)
+![Camera Calibration & Distortion Correction](https://github.com/msr-peng/Self-Driving-Turtlebot3/blob/master/pictures/Advanced%20Lane%20Line%20Finding/Camera%20Calibration.png)
 
 **2. Thresholded Binary Image Based on Color Transforms and Gradients**
 Firstly, I implement a mask to get the region of road.
