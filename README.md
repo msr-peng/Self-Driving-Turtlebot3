@@ -1,7 +1,7 @@
 # Self-Driving Turtlebot3 Based on Advanced Lane Line Finding and Traffic Sign Recognition
 
 
-![Turtlebot 3]('./pictures/turtlebot-3.jpg')
+![Turtlebot 3](pictures/turtlebot-3.jpg)
 
 **I'm still work on this project to fulfill all the functionality of the robot as the project proposal. I'll update any progression of this project on time.**
 
@@ -56,7 +56,7 @@ I decided to implement a PID controller to make the robot follow the lane lines.
 
 **1. Camera Calibration**
 I collected 20 images of chessboard from varying angle and distance served as camera calibration input, feed them into `cv2.findChessboardCorners` to get object points and image points, then feed the result into `cv2.calibrateCamera` to get the Camera Matrix. Here is the result after distortion correction.
-![Camera Calibration & Distortion Correction]('./pictures/Advanced\ Lane\ Line\ Finding/Camera\ Calibration.png')
+![Camera Calibration & Distortion Correction](pictures/Advanced Lane Line Finding/Camera Calibration.png)
 
 **2. Thresholded Binary Image Based on Color Transforms and Gradients**
 Firstly, I implement a mask to get the region of road.
@@ -132,8 +132,7 @@ I then adds “heat” to a map for a list of bonding boxes for the detections i
 As we can see, after apply the heatmap, we successfully remove all false positives and combined all multiple positives.(although the middle two traffic signs are combined due to there are nearby each other, we can separate them once the window are far not square.)
 
 ### Part 3. Traffic Sign Classifier
-This part, I build a deep CNN based on [G
-erman Traffic Sign Dataset](http://benchmark.ini.rub.de/) again, which can classifier 43 sort of traffic sign. It’s accuracy arrived at 96.1%.
+This part, I build a deep CNN based on [German Traffic Sign Dataset](http://benchmark.ini.rub.de/) again, which can classifier 43 sort of traffic sign. It’s accuracy arrived at 96.1%.
 
 **1. Dataset Distribution and Its Preprocess**
 Before we feed the data into our model to train, we normalized the data, make it locate at the region [-0.5m +0.5], thus can shorten the training time highly.
