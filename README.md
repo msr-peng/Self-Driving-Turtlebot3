@@ -1,7 +1,7 @@
 # Self-Driving Turtlebot3 Based on Advanced Lane Line Finding and Traffic Sign Recognition
 
 
-![Turtlebot 3](pictures/turtlebot-3.jpg)
+![Turtlebot 3]('./pictures/turtlebot-3.jpg')
 
 **I'm still work on this project to fulfill all the functionality of the robot as the project proposal. I'll update any progression of this project on time.**
 
@@ -56,12 +56,12 @@ I decided to implement a PID controller to make the robot follow the lane lines.
 
 **1. Camera Calibration**
 I collected 20 images of chessboard from varying angle and distance served as camera calibration input, feed them into `cv2.findChessboardCorners` to get object points and image points, then feed the result into `cv2.calibrateCamera` to get the Camera Matrix. Here is the result after distortion correction.
-![Camera Calibration & Distortion Correction](pictures/Advanced Lane Finding/Camera Calibration.png)
+![Camera Calibration & Distortion Correction]('./pictures/Advanced\ Lane\ Line\ Finding/Camera\ Calibration.png')
 
 **2. Thresholded Binary Image Based on Color Transforms and Gradients**
 Firstly, I implement a mask to get the region of road.
 The color of two lane lines are black and orange respectively. So I use low L channel in HLS to find black lane, and low B channel in RGB to find orange lane. In addition, to make the land finding mechanism more robust, I implement gradient threshold to filter out nearly vertical or horizontal lines, which are not likely to be lane lines. Here is the thresholded image.
-![Thresholded Binary Image](pictures/Advanced Lane Finding/Thresholded.png)
+![Thresholded Binary Image](pictures/Advanced\ Lane\ Line\ Finding/Thresholded.png)
 
 **3. Prespective Transform(birds-eye view)**
 Then I implement birds-eye-view transform by choose the transform boundary manually using
